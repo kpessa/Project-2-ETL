@@ -1,6 +1,6 @@
 import os
 
-REPO_NAME = "Project-2-ETL"  # Used for FREEZER_BASE_URL
+REPO_NAME = "Project-2-ETL/docs"  # Used for FREEZER_BASE_URL
 DEBUG = True
 
 # Assumes the app is located in the same directory
@@ -11,7 +11,7 @@ def parent_dir(path):
     '''Return the parent of a directory.'''
     return os.path.abspath(os.path.join(path, os.pardir))
 
-PROJECT_ROOT = parent_dir(APP_DIR)
+PROJECT_ROOT = os.path.join(parent_dir(APP_DIR),"docs")
 # In order to deploy to Github pages, you must build the static files to
 # the project root
 FREEZER_DESTINATION = PROJECT_ROOT

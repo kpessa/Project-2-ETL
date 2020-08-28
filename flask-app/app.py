@@ -1,4 +1,4 @@
-from flask import *
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 
@@ -35,4 +35,5 @@ def potential_fraud():
 # -----------------------------------------
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    from elsa import cli
+    cli(app, base_url="http://kpessa.github.io/Project-2-ETL")
