@@ -48,8 +48,6 @@ def potential_fraud():
     return render_template("potential_fraud.html")
 
 
-
-
 # -----------------------------------------
 # --             APP                     --
 # -----------------------------------------
@@ -57,3 +55,5 @@ def potential_fraud():
 if __name__ == "__main__":
     #from elsa import cli
     app.run(debug=True)
+else:
+    app.run()
