@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
@@ -53,7 +54,7 @@ def potential_fraud():
 # -----------------------------------------
 
 if __name__ == "__main__":
-    #from elsa import cli
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 else:
     app.run()
