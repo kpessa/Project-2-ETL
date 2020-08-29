@@ -1,0 +1,17 @@
+{% extends "data_wrapper.html" %} 
+
+{% block image %}
+<img src="{{ url_for('static',filename="potential_fraud.png") }}" class="img-fluid">
+{% endblock %}
+
+{% block title %}
+| Potential Fraud
+{% endblock %}
+
+{% block heading %}
+<h1>Potential Fraud Data</h1>
+{% endblock %}
+
+{% block table %}
+{% include "potential_fraud_table.html" %}
+{% endblock %}

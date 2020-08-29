@@ -1,0 +1,26 @@
+{% extends "wrapper.html" %} 
+
+{% block content %}
+<div class="container" align="center">
+  <div class="row my-2">
+    <div class="col">
+      {% block image %}{% endblock %}
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      {% block heading %}{% endblock %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Here is a sample of the table (first 100 rows)..</p>
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="col">
+      {% block table %}{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

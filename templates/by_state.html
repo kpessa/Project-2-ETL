@@ -1,0 +1,19 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+<main>
+    <section>
+      <h1 style="text-align:center">Which states/localities have the highest number of frauds?</h1>
+      <p style="text-align:center;"><img src="{{ url_for("static", filename="Map of USA with numbers.gif") }}" alt="Map of USA with Numbers" width="600px" height="1200px" class="img-thumbnail"></p>
+    </section>
+    <section>
+      <h2>Inpatient Fraud by State</h2>
+      <img src="{{ url_for("static", filename="Inpatient Fraud Graph.PNG") }}" alt="Inpatient Fraud Graph by State" class="img-thumbail">
+    </section>
+    <section>
+      <h2>Outpatient Fraud by State</h2>
+      <img src="{{ url_for("static", filename="Outpatient Fraud Graph.PNG") }}" alt="Outpatient Fraud Graph by State" class="img-thumbail">
+    </section>
+  
+  </main>
+  {% endblock %}
