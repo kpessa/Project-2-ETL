@@ -8,25 +8,45 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+
+# -----------------------------------------
+# --            ANALYSIS                 --
+# -----------------------------------------
+@app.route('/by_state.html')
+def by_state():
+    return render_template("by_state.html")
+
+@app.route('/common_codes.html')
+def common_codes():
+    return render_template("common_codes.html")
+
+# -----------------------------------------
+# --              ERD                    --
+# -----------------------------------------
+@app.route('/erd.html')
+def erd():
+    return render_template("erd.html")
+
 # -----------------------------------------
 # --             DATA                    --
 # -----------------------------------------
 
-@app.route('/data/beneficiary.html')
+@app.route('/beneficiary.html')
 def beneficiary():
     return render_template("beneficiary.html")
 
-@app.route('/data/inpatient.html')
+@app.route('/inpatient.html')
 def inpatient():
     return render_template("inpatient.html")
 
-@app.route('/data/outpatient.html')
+@app.route('/outpatient.html')
 def outpatient():
     return render_template("outpatient.html")
 
-@app.route('/data/potential_fraud.html')
+@app.route('/potential_fraud.html')
 def potential_fraud():
     return render_template("potential_fraud.html")
+
 
 
 
@@ -35,5 +55,5 @@ def potential_fraud():
 # -----------------------------------------
 
 if __name__ == "__main__":
-    from elsa import cli
-    cli(app, base_url="http://kpessa.github.io/Project-2-ETL")
+    #from elsa import cli
+    app.run(debug=True)
