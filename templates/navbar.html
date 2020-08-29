@@ -1,59 +1,34 @@
-<!---------------------  NAVIGATION BAR ----------------------->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="navbar-brand">
-      <a href="{{ url_for("index") }}"
-        ><button class="btn btn-info">Healthcare Potential Fraud</button></a
-      >
-    </div>
-    <div class="collapse navbar-collapse" id="navbarsupport">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="index.html"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Data
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ url_for("inpatient") }}">Inpatient</a>
-            <a class="dropdown-item" href="{{ url_for("outpatient") }}">Outpatient</a>
-            <a class="dropdown-item" href="{{ url_for("potential_fraud") }}">Potential Fraud</a>
-            <a class="dropdown-item" href="{{ url_for("beneficiary") }}">Beneficiary</a>
-          </div>
-        </li>
-        <div class="navbar-brand"></div>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="index.html"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Analysis
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="by_state.html">Fraud by State</a>
-            <a class="dropdown-item" href="common_codes.html"
-              >Most Common Procedure Codes</a
-            >
-          </div>
-        </li>
-        <div class="navbar-brand"></div>
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ url_for("erd") }}"
-            >ERD <span class="sr-only">(current)</span></a
-          >
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+  <a class="navbar-brand bg-info text-white px-3" href="{{ url_for("index") }}">Healthcare Potential Fraud</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>  
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ url_for("inpatient") }}">Inpatient</a>
+          <a class="dropdown-item" href="{{ url_for("outpatient") }}">Outpatient</a>
+          <a class="dropdown-item" href="{{ url_for("potential_fraud") }}">Potential Fraud</a>
+          <a class="dropdown-item" href="{{ url_for("beneficiary") }}">Beneficiary</a>
+        </div>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analysis</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="by_state.html">Fraud by State</a>
+          <a class="dropdown-item" href="common_codes.html">Most Common Procedure Codes</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for("erd") }}">ERD <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
   </nav>
-  <!---------------------  NAVIGATION BAR ----------------------->
+  
